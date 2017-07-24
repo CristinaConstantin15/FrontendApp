@@ -1,5 +1,6 @@
-'use strict';
-
+/**
+ * Created by Cristina.Constantin on 7/3/2017.
+ */
 hrApp.controller('JobAddController', ['$scope', '$http', '$location', 'JobService',
     function($scope, $http, $location, JobService) {
 
@@ -26,4 +27,4 @@ hrApp.controller('JobAddController', ['$scope', '$http', '$location', 'JobServic
                 console.log('An error occurred while adding job: ' + err.status);
             })
         };
-}]);
+    }]);

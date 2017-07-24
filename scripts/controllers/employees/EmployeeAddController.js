@@ -1,5 +1,3 @@
-'use strict';
-
 hrApp.controller('EmployeeAddController', ['$scope', '$http', '$location', 'DepartmentService', 'JobService', 'EmployeeService',
     function($scope, $http, $location, DepartmentService, JobService, EmployeeService) {
 
@@ -30,17 +28,10 @@ hrApp.controller('EmployeeAddController', ['$scope', '$http', '$location', 'Depa
             console.log('An error occurred while finding all managers: ' + err.status);
         });
 
-        /**
-         * Reset employee fields
-         */
         $scope.reset = function() {
             this.employee = {};
         };
 
-        /**
-         * Persist an employee
-         * @param employee - employee to be persisted
-         */
         $scope.save = function(employee) {
             EmployeeService.add(employee).then(function(res) {
                 $scope.employee = res.data;
@@ -50,4 +41,4 @@ hrApp.controller('EmployeeAddController', ['$scope', '$http', '$location', 'Depa
             });
         };
 
-}]);
+    }]);

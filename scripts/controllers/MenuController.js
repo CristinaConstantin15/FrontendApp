@@ -1,5 +1,3 @@
-'use strict';
-
 hrApp.controller('MenuController', ['$scope', '$interval', 'EmployeeActionsService', 'JobActionsService', 'DepartmentActionsService', 'LocationActionsService',
     function($scope, $interval, EmployeeActionsService, JobActionsService, DepartmentActionsService, LocationActionsService) {
 
@@ -13,3 +11,4 @@ hrApp.controller('MenuController', ['$scope', '$interval', 'EmployeeActionsServi
         }, 1000);
 
     }]);
+

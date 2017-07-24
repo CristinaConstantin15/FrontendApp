@@ -1,5 +1,6 @@
-'use strict';
-
+/**
+ * Created by Cristina.Constantin on 7/3/2017.
+ */
 hrApp.controller('JobEditController', ['$scope', '$location', '$routeParams', '$http', 'JobService',
     function($scope, $location, $routeParams, $http, JobService) {
 
@@ -30,4 +31,4 @@ hrApp.controller('JobEditController', ['$scope', '$location', '$routeParams', '$
                 console.log('An error occurred while editing job: ' + err.status);
             });
         };
-}]);
+    }]);

@@ -1,5 +1,3 @@
-'use strict';
-
 hrApp.controller('EmployeeEditController', ['$scope', '$http', '$routeParams', '$filter', '$location', 'DepartmentService', 'JobService', 'EmployeeService',
     function($scope, $http, $routeParams, $filter, $location, DepartmentService, JobService, EmployeeService) {
 
@@ -35,17 +33,10 @@ hrApp.controller('EmployeeEditController', ['$scope', '$http', '$routeParams', '
             console.log('An error occurred while finding employee: ' + err.status);
         });
 
-        /**
-         * Reset employee fields
-         */
         $scope.reset = function() {
             $scope.employee = {};
         };
 
-        /**
-         * Update an employee
-         * @param employee - employee to be updated
-         */
         $scope.save = function(employee) {
             EmployeeService.edit(employee).then(function() {
                 $location.url('/employeeView/' + $scope.employee.employeeId);

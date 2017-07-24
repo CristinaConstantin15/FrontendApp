@@ -1,5 +1,6 @@
-'use strict';
-
+/**
+ * Created by Cristina.Constantin on 7/24/2017.
+ */
 hrApp.controller('DepartmentEditController', ['$scope', '$http', '$routeParams', '$filter', '$location', 'LocationService', 'DepartmentService',
     function($scope, $http, $routeParams, $filter, $location, LocationService, DepartmentService) {
 
@@ -17,17 +18,10 @@ hrApp.controller('DepartmentEditController', ['$scope', '$http', '$routeParams',
             console.log('An error occurred while finding department: ' + err.status);
         });
 
-        /**
-         * Reset department fields
-         */
         $scope.reset = function() {
             $scope.department = {};
         };
 
-        /**
-         * Update a department
-         * @param department - department to be updated
-         */
         $scope.save = function(department) {
             DepartmentService.edit(department).then(function() {
                 $location.url('/departmentView/' + $scope.department.departmentId);

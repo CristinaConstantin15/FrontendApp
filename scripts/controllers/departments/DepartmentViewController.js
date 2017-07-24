@@ -1,12 +1,9 @@
-'use strict';
-
+/**
+ * Created by Cristina.Constantin on 7/24/2017.
+ */
 hrApp.controller('DepartmentViewController', ['$scope', '$http', '$routeParams', '$location', 'DepartmentService',
     function($scope, $http, $routeParams, $location, DepartmentService) {
 
-        /**
-         * Retrieve a department
-         * @param departmentId - identifier of the department to be retrieved
-         */
         DepartmentService.findOne($routeParams.departmentId)
             .then(function(res) {
                 $scope.department = res.data;
@@ -14,9 +11,6 @@ hrApp.controller('DepartmentViewController', ['$scope', '$http', '$routeParams',
                 console.log('An error occurred while finding the department: ' + err.status);
             });
 
-        /**
-         * Navigate back to department list page
-         */
         $scope.back = function() {
             $location.url('/departmentList');
         };

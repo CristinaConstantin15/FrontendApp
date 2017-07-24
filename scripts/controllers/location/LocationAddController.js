@@ -1,5 +1,6 @@
-'use strict';
-
+/**
+ * Created by Cristina.Constantin on 7/24/2017.
+ */
 hrApp.controller('LocationAddController', ['$scope', '$http', '$location', 'LocationService',
     function($scope, $http, $location, LocationService) {
 
@@ -7,17 +8,10 @@ hrApp.controller('LocationAddController', ['$scope', '$http', '$location', 'Loca
 
         $scope.requiredErrorMessage = 'Please fill out this field';
 
-        /**
-         * Reset location fields
-         */
         $scope.reset = function() {
             this.location = {};
         };
 
-        /**
-         * Persist a location
-         * @param location - location to be persisted
-         */
         $scope.save = function(location) {
             LocationService.add(location).then(function(res) {
                 $scope.location = res.data;
@@ -27,4 +21,4 @@ hrApp.controller('LocationAddController', ['$scope', '$http', '$location', 'Loca
             });
         };
 
-}]);
+    }]);

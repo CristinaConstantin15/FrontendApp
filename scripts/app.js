@@ -72,7 +72,7 @@ hrApp.config(['$routeProvider',
                 controller: 'MainController'
             });
     }]).run(['$rootScope',
-        function($rootScope) {
-            // TODO
-        }
-    ]);
+    function($rootScope) {
+        // TODO
+    }
+]);

@@ -53,8 +53,9 @@ module.exports = function (grunt) {
         connect: {
             proxies: [
                 {
+                    //TODO
                     context: '/app/mvc/',
-                    host: 'localhost',
+                    host: '192.168.99.100',
                     port: 49100,
                     https: false,
                     changeOrigin: false

@@ -1,13 +1,22 @@
-'use strict';
-
 hrApp.value('EmployeeActionsService', [
+        {
+            label: "List employees",
+            url: "#/employeeList"
+        },
+        {
+            label: "Add employee",
+            url: "#/employeeAdd"
+        }
+    ]);
+
+hrApp.value('DepartmentActionsService', [
     {
-        label: "List employees",
-        url: "#/employeeList"
+        label: "List departments",
+        url: "#/departmentList"
     },
     {
-        label: "Add employee",
-        url: "#/employeeAdd"
+        label: "Add department",
+        url: "#/departmentAdd"
     }
 ]);
 
@@ -19,17 +28,6 @@ hrApp.value('JobActionsService', [
     {
         label: "Add job",
         url: "#/jobAdd"
-    }
-]);
-
-hrApp.value('DepartmentActionsService', [
-    {
-        label: "List departments",
-        url: "#/departmentList"
-    },
-    {
-        label: "Add department",
-        url: "#/departmentAdd"
     }
 ]);
 

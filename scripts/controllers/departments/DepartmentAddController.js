@@ -1,4 +1,6 @@
-'use strict';
+/**
+ * Created by Cristina.Constantin on 7/24/2017.
+ */
 
 hrApp.controller('DepartmentAddController', ['$scope', '$http', '$location', 'LocationService', 'DepartmentService',
     function($scope, $http, $location, LocationService, DepartmentService) {
@@ -13,17 +15,10 @@ hrApp.controller('DepartmentAddController', ['$scope', '$http', '$location', 'Lo
             console.log('An error occurred while finding all locations: ' + err.status);
         });
 
-        /**
-         * Reset department fields
-         */
         $scope.reset = function() {
             this.department = {};
         };
 
-        /**
-         * Persist a department
-         * @param department - department to be persisted
-         */
         $scope.save = function(department) {
             DepartmentService.add(department).then(function(res) {
                 $scope.department = res.data;
@@ -33,4 +28,4 @@ hrApp.controller('DepartmentAddController', ['$scope', '$http', '$location', 'Lo
             });
         };
 
-}]);
+    }]);

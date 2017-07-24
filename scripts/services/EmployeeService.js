@@ -1,4 +1,3 @@
-'use strict';
 
 hrApp.service('EmployeeService', ['$http', 'CommonResourcesFactory', function($http, CommonResourcesFactory) {
         return {

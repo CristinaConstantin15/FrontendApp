@@ -1,6 +1,4 @@
-'use strict';
-
-hrApp.factory('CommonResourcesFactory', function() {
+hrApp.factory('CommonResourcesFactory', function () {
         var baseUrl = "/app/mvc/";
         return {
             findAllDepartmentsUrl: baseUrl + "departments/all",
@@ -8,11 +6,11 @@ hrApp.factory('CommonResourcesFactory', function() {
             findAllJobsUrl: baseUrl + "jobs/all",
             findAllLocationsUrl: baseUrl + "locations/all",
             findOneDepartmentUrl: baseUrl + "departments/one/",
-            findOneEmployeeUrl: baseUrl + "employees/one",
-            findOneJobUrl: baseUrl + "jobs/one",
+            findOneEmployeeUrl: baseUrl + "employees/one/",
+            findOneJobUrl: baseUrl + "jobs/one/",
             findOneLocationUrl: baseUrl + "locations/one/",
-            deleteDepartmentUrl: baseUrl + "departments/one/",
-            deleteEmployeeUrl: baseUrl + "employees/one/",
+            deleteDepartmentUrl: baseUrl + "departments/one",
+            deleteEmployeeUrl: baseUrl + "employees/one",
             deleteJobUrl: baseUrl + "jobs",
             deleteLocationUrl: baseUrl + "locations",
             addDepartmentUrl: baseUrl + "departments",

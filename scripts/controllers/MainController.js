@@ -1,13 +1,10 @@
-'use strict';
-
-hrApp.controller('MainController', ['$scope', function($scope) {
+hrApp.controller('MainController', ['$scope', function ($scope) {
 
     $scope.title = 'HR Application';
-    $scope.description = "Web application for employee management";
+    $scope.description = "Application for managing employees";
 
     $scope.descriptionShow = false;
-    $scope.toggleDescription= function() {
+    $scope.toggleDescriptionShow = function() {
         $scope.descriptionShow = !$scope.descriptionShow;
     };
-
 }]);

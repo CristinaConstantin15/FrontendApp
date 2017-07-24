@@ -1,4 +1,6 @@
-'use strict';
+/**
+ * Created by Cristina.Constantin on 7/24/2017.
+ */
 
 hrApp.controller('LocationEditController', ['$scope', '$http', '$routeParams', '$filter', '$location', 'LocationService',
     function($scope, $http, $routeParams, $filter, $location, LocationService) {
@@ -11,17 +13,10 @@ hrApp.controller('LocationEditController', ['$scope', '$http', '$routeParams', '
             console.log('An error occurred while finding location: ' + err.status);
         });
 
-        /**
-         * Reset location fields
-         */
         $scope.reset = function() {
             $scope.location = {};
         };
 
-        /**
-         * Update a location
-         * @param location - location to be updated
-         */
         $scope.save = function(location) {
             LocationService.edit(location).then(function() {
                 $location.url('/locationView/' + $scope.location.locationId);
